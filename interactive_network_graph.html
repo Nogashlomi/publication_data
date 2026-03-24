@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"group": 0, "id": "Paris", "label": "Paris", "shape": "dot"}, {"group": 0, "id": "Venice", "label": "Venice", "shape": "dot"}, {"group": 0, "id": "Leipzig", "label": "Leipzig", "shape": "dot"}, {"group": 0, "id": "Vienna", "label": "Vienna", "shape": "dot"}, {"group": 0, "id": "Ingolstadt", "label": "Ingolstadt", "shape": "dot"}, {"group": 0, "id": "Milan", "label": "Milan", "shape": "dot"}, {"group": 0, "id": "Wittenberg", "label": "Wittenberg", "shape": "dot"}, {"group": 0, "id": "Cologne", "label": "Cologne", "shape": "dot"}, {"group": 0, "id": "Antwerp", "label": "Antwerp", "shape": "dot"}, {"group": 0, "id": "Leiden", "label": "Leiden", "shape": "dot"}, {"group": 0, "id": "Alcal\u00e1 de Henares", "label": "Alcal\u00e1 de Henares", "shape": "dot"}, {"group": 0, "id": "Lyon", "label": "Lyon", "shape": "dot"}, {"group": 0, "id": "Florence", "label": "Florence", "shape": "dot"}, {"group": 0, "id": "Basel", "label": "Basel", "shape": "dot"}, {"group": 0, "id": "Leuven", "label": "Leuven", "shape": "dot"}, {"group": 0, "id": "Seville", "label": "Seville", "shape": "dot"}, {"group": 0, "id": "Mainz", "label": "Mainz", "shape": "dot"}, {"group": 0, "id": "Saint Gervais", "label": "Saint Gervais", "shape": "dot"}, {"group": 0, "id": "Rome", "label": "Rome", "shape": "dot"}, {"group": 0, "id": "Geneva", "label": "Geneva", "shape": "dot"}, {"group": 0, "id": "Nuremberg", "label": "Nuremberg", "shape": "dot"}, {"group": 0, "id": "Lisbon", "label": "Lisbon", "shape": "dot"}, {"group": 0, "id": "Krak\u00f3w", "label": "Krak\u00f3w", "shape": "dot"}, {"group": 0, "id": "Strasbourg", "label": "Strasbourg", "shape": "dot"}, {"group": 0, "id": "Neustadt an der Weinstra\u00dfe", "label": "Neustadt an der Weinstra\u00dfe", "shape": "dot"}, {"group": 0, "id": "Salamanca", "label": "Salamanca", "shape": "dot"}, {"group": 0, "id": "Sine loco", "label": "Sine loco", "shape": "dot"}, {"group": 0, "id": "Heidelberg", "label": "Heidelberg", "shape": "dot"}, {"group": 0, "id": "Siena", "label": "Siena", "shape": "dot"}, {"group": 0, "id": "London", "label": "London", "shape": "dot"}, {"group": 1, "id": "3D", "label": "3D", "shape": "dot"}, {"group": 1, "id": "lathe machine", "label": "lathe machine", "shape": "dot"}, {"group": 1, "id": "disproportional decorative elements", "label": "disproportional decorative elements", "shape": "dot"}, {"group": 1, "id": "color", "label": "color", "shape": "dot"}, {"group": 1, "id": "advanced diagram", "label": "advanced diagram", "shape": "dot"}, {"group": 1, "id": "CK_Definition of Sphere by Euclid", "label": "CK_Definition of Sphere by Euclid", "shape": "dot"}, {"group": 1, "id": "CK_Measurements of the Earth", "label": "CK_Measurements of the Earth", "shape": "dot"}, {"group": 1, "id": "CK_Introduction to Geometry", "label": "CK_Introduction to Geometry", "shape": "dot"}, {"group": 1, "id": "CK_Definition of Sphere by Theodosius", "label": "CK_Definition of Sphere by Theodosius", "shape": "dot"}, {"group": 1, "id": "CK_Geometry for Geometry", "label": "CK_Geometry for Geometry", "shape": "dot"}, {"group": 1, "id": "CK_Additions on Definitions of the Sphere", "label": "CK_Additions on Definitions of the Sphere", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "Paris", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Paris", "to": "CK_Measurements of the Earth"}, {"from": "Paris", "to": "CK_Introduction to Geometry"}, {"from": "Paris", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Paris", "to": "CK_Geometry for Geometry"}, {"from": "Paris", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Paris", "to": "3D"}, {"from": "Paris", "to": "lathe machine"}, {"from": "Paris", "to": "disproportional decorative elements"}, {"from": "Paris", "to": "color"}, {"from": "Venice", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Venice", "to": "CK_Measurements of the Earth"}, {"from": "Venice", "to": "CK_Introduction to Geometry"}, {"from": "Venice", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Venice", "to": "CK_Geometry for Geometry"}, {"from": "Venice", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Venice", "to": "3D"}, {"from": "Venice", "to": "lathe machine"}, {"from": "Venice", "to": "disproportional decorative elements"}, {"from": "Venice", "to": "color"}, {"from": "Venice", "to": "advanced diagram"}, {"from": "Leipzig", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Leipzig", "to": "CK_Measurements of the Earth"}, {"from": "Leipzig", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Leipzig", "to": "CK_Geometry for Geometry"}, {"from": "Leipzig", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Vienna", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Vienna", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Vienna", "to": "3D"}, {"from": "Vienna", "to": "lathe machine"}, {"from": "Vienna", "to": "color"}, {"from": "Ingolstadt", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Ingolstadt", "to": "3D"}, {"from": "Ingolstadt", "to": "lathe machine"}, {"from": "Ingolstadt", "to": "color"}, {"from": "Milan", "to": "CK_Measurements of the Earth"}, {"from": "Milan", "to": "CK_Geometry for Geometry"}, {"from": "Milan", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Wittenberg", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Wittenberg", "to": "CK_Introduction to Geometry"}, {"from": "Wittenberg", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Wittenberg", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Wittenberg", "to": "3D"}, {"from": "Wittenberg", "to": "lathe machine"}, {"from": "Wittenberg", "to": "disproportional decorative elements"}, {"from": "Wittenberg", "to": "color"}, {"from": "Cologne", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Cologne", "to": "CK_Measurements of the Earth"}, {"from": "Cologne", "to": "CK_Introduction to Geometry"}, {"from": "Cologne", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Cologne", "to": "3D"}, {"from": "Cologne", "to": "lathe machine"}, {"from": "Cologne", "to": "disproportional decorative elements"}, {"from": "Cologne", "to": "color"}, {"from": "Antwerp", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Antwerp", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Antwerp", "to": "3D"}, {"from": "Antwerp", "to": "lathe machine"}, {"from": "Antwerp", "to": "disproportional decorative elements"}, {"from": "Antwerp", "to": "color"}, {"from": "Leiden", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Leiden", "to": "3D"}, {"from": "Leiden", "to": "lathe machine"}, {"from": "Leiden", "to": "disproportional decorative elements"}, {"from": "Leiden", "to": "color"}, {"from": "Alcal\u00e1 de Henares", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Alcal\u00e1 de Henares", "to": "CK_Measurements of the Earth"}, {"from": "Alcal\u00e1 de Henares", "to": "CK_Introduction to Geometry"}, {"from": "Alcal\u00e1 de Henares", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Lyon", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Lyon", "to": "CK_Measurements of the Earth"}, {"from": "Lyon", "to": "CK_Introduction to Geometry"}, {"from": "Lyon", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Lyon", "to": "CK_Geometry for Geometry"}, {"from": "Lyon", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Lyon", "to": "3D"}, {"from": "Lyon", "to": "lathe machine"}, {"from": "Lyon", "to": "disproportional decorative elements"}, {"from": "Lyon", "to": "color"}, {"from": "Lyon", "to": "advanced diagram"}, {"from": "Florence", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Florence", "to": "CK_Measurements of the Earth"}, {"from": "Florence", "to": "CK_Introduction to Geometry"}, {"from": "Basel", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Basel", "to": "lathe machine"}, {"from": "Basel", "to": "color"}, {"from": "Leuven", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Leuven", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Leuven", "to": "3D"}, {"from": "Leuven", "to": "lathe machine"}, {"from": "Leuven", "to": "disproportional decorative elements"}, {"from": "Leuven", "to": "color"}, {"from": "Seville", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Seville", "to": "CK_Introduction to Geometry"}, {"from": "Seville", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Seville", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Seville", "to": "3D"}, {"from": "Seville", "to": "color"}, {"from": "Mainz", "to": "CK_Introduction to Geometry"}, {"from": "Mainz", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Mainz", "to": "advanced diagram"}, {"from": "Saint Gervais", "to": "CK_Measurements of the Earth"}, {"from": "Saint Gervais", "to": "CK_Introduction to Geometry"}, {"from": "Saint Gervais", "to": "CK_Geometry for Geometry"}, {"from": "Saint Gervais", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Saint Gervais", "to": "advanced diagram"}, {"from": "Rome", "to": "CK_Measurements of the Earth"}, {"from": "Rome", "to": "CK_Introduction to Geometry"}, {"from": "Rome", "to": "CK_Geometry for Geometry"}, {"from": "Rome", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Rome", "to": "advanced diagram"}, {"from": "Geneva", "to": "CK_Measurements of the Earth"}, {"from": "Geneva", "to": "CK_Introduction to Geometry"}, {"from": "Geneva", "to": "CK_Geometry for Geometry"}, {"from": "Geneva", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Geneva", "to": "advanced diagram"}, {"from": "Nuremberg", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Nuremberg", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Lisbon", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Lisbon", "to": "CK_Introduction to Geometry"}, {"from": "Lisbon", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Krak\u00f3w", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Krak\u00f3w", "to": "CK_Measurements of the Earth"}, {"from": "Krak\u00f3w", "to": "CK_Introduction to Geometry"}, {"from": "Krak\u00f3w", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Krak\u00f3w", "to": "disproportional decorative elements"}, {"from": "Krak\u00f3w", "to": "color"}, {"from": "Strasbourg", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Strasbourg", "to": "CK_Introduction to Geometry"}, {"from": "Strasbourg", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Neustadt an der Weinstra\u00dfe", "to": "CK_Introduction to Geometry"}, {"from": "Neustadt an der Weinstra\u00dfe", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Neustadt an der Weinstra\u00dfe", "to": "3D"}, {"from": "Salamanca", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Salamanca", "to": "3D"}, {"from": "Salamanca", "to": "lathe machine"}, {"from": "Salamanca", "to": "color"}, {"from": "Sine loco", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Sine loco", "to": "CK_Introduction to Geometry"}, {"from": "Sine loco", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Heidelberg", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Heidelberg", "to": "CK_Introduction to Geometry"}, {"from": "Heidelberg", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Heidelberg", "to": "3D"}, {"from": "Siena", "to": "CK_Definition of Sphere by Euclid"}, {"from": "Siena", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "Siena", "to": "CK_Additions on Definitions of the Sphere"}, {"from": "Siena", "to": "3D"}, {"from": "Siena", "to": "lathe machine"}, {"from": "Siena", "to": "color"}, {"from": "Siena", "to": "advanced diagram"}, {"from": "London", "to": "CK_Definition of Sphere by Euclid"}, {"from": "London", "to": "CK_Definition of Sphere by Theodosius"}, {"from": "London", "to": "3D"}, {"from": "London", "to": "lathe machine"}, {"from": "London", "to": "color"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

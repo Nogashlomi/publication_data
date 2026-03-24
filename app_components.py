@@ -182,7 +182,7 @@ class VisApp:
 
         self.keyword_selector = KeyWordSelector(self.event_bus, df)
 
-        self.img_app = ImageDisplay(df, r'C:\Users\nogas\Image_data\images_ck_flat\\', self.event_bus)
+        self.img_app = ImageDisplay(df, r'C:\Users\nogashlomi\Library\CloudStorage\GoogleDrive-noga.shlomi@gmail.com\My Drive\images_ck_flat\', self.event_bus)
 
         self.plot_display = PlotDisplay(df, self.event_bus, books_df)
         self.text_display = TextDisplay(self.event_bus, df)

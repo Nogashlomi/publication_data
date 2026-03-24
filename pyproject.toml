@@ -5,13 +5,23 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "adjusttext>=1.3.0",
     "bqplot>=0.12.44",
     "cartopy>=0.24.1",
+    "folium>=0.19.5",
     "geopandas>=1.0.1",
     "ipywidgets>=8.1.5",
     "jupyterlab>=4.3.4",
+    "kaleido>=1.2.0",
     "matplotlib>=3.10.0",
+    "networkx>=3.4.2",
     "numpy>=2.2.1",
+    "openpyxl>=3.1.5",
     "pandas>=2.2.3",
+    "plotly>=6.0.1",
     "practicalsparql>=0.0.6",
+    "python-louvain>=0.16",
+    "pyvis>=0.3.2",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
 ]

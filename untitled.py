@@ -1,2 +1,0 @@
-import ipywidgets as widgets
-
