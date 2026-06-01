@@ -1,0 +1,125 @@
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sphaera: <http://ontologies.mpiwg-berlin.mpg.de/sphaera/>
+PREFIX sphType:<http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/>
+PREFIX sp: <http://spinrdf.org/sp#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rs: <http://www.researchspace.org/ontology/>
+PREFIX crmDig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX sphRole: <http://sphaera.mpiwg-berlin.mpg.de/id/thes/role/>
+
+
+SELECT ?imageURL ?page_link ?bb ?cluster_name (GROUP_CONCAT(DISTINCT ?note; SEPARATOR=", ") as ?cks) ?doiv ?short_title ?bid ?pagenum (GROUP_CONCAT(DISTINCT ?author_label; SEPARATOR=", ") as ?authors)(GROUP_CONCAT(DISTINCT ?publisher_label; SEPARATOR=", ") as ?publishers)(GROUP_CONCAT(DISTINCT ?printer_label; SEPARATOR=", ") as ?printers)  ?pid ?pdoiv ?place (year(?begin)as ?year)
+WHERE {
+  	
+  	?cluster a sphaera:Element.
+  	?cluster ecrm:P3_has_note ?cluster_name.
+  ?cluster ecrm:P2_has_type/ecrm:P3_has_note ?note .
+  	?cluster ^ecrm:P138_represents ?images.
+    ?images rs:boundingBox ?bb.
+  ?images crmDig:L49_is_primary_area_of ?page.
+  ?page sphaera:hasIIIFImage ?page_link.
+  ?page ecrm:P1_is_identified_by ?pagenum.
+  ?page ^ecrm:P106_is_composed_of/^ecrm:P128_carries/^efrbroo:R30_produced/^efrbroo:R29i_was_reproduced_by ?book.
+  
+  ?book a sphaera:Book;
+		ecrm:P1_is_identified_by ?idtype.
+    ?idtype ecrm:P2_has_type <http://ontologies.mpiwg-berlin.mpg.de/sphaera/customIdentifier>.
+  	?idtype ecrm:P3_has_note ?bid.
+    ?book ecrm:P1_is_identified_by ?doi.
+        ?doi ecrm:P2_has_type <http://www.doi.org>.
+        ?doi ecrm:P3_has_note ?doiv.
+  
+  
+  
+  
+  #BIND('' as ?flag)
+
+       OPTIONAL {
+    ?page ecrm:P2_has_type ?page_label.
+    
+    BIND(
+  IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/30af573a-8d8b-11ec-b7b2-acde48001122>, 'true', 	  # padding
+      IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/30af7cec-8d8b-11ec-b7b2-acde48001122>, 'true',    # duplicate
+        IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/30af4ac4-8d8b-11ec-b7b2-acde48001122>, 'true', 	  # digit. artefact
+          IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/c2462315-61c3-4f27-8735-a49c0b18a83a>, 'true', 	  # manually added leaf
+            IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/30af60f4-8d8b-11ec-b7b2-acde48001122>, 'true', # title page
+             IF (?page_label = <http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/page-keyword/a7e4685e-94a3-4c23-8314-0e95baf4b31f>, 'true', '')	  # text added by buyer
+
+          )
+        )
+      )
+    )
+    
+  )
+  AS ?flag
+    )
+  }
+  
+  
+     OPTIONAL {
+  ?attribute_assignment ecrm:P2_has_type sphType:partAssignment;
+    ecrm:P140_assigned_attribute_to/^ecrm:P165_incorporates/^ecrm:P128_carries ?book ;
+    ecrm:P141_assigned ?part_or_adaption ;
+    sphaera:pageFrom ?page_from ;
+    sphaera:pageTo ?page_to .
+  FILTER(?page_from <= ?pagenum && ?page_to >= ?pagenum)
+  ?part_or_adaption ecrm:P3_has_note ?part_or_adaption_label ;
+    a ?part_or_adaption_type .
+    ?part_or_adaption  ecrm:P1_is_identified_by ?part_id.
+   ?part_id ecrm:P2_has_type sphaera:customIdentifier ;
+  ecrm:P3_has_note ?pid_str .
+  ?part_or_adaption  ecrm:P1_is_identified_by ?pdoi.
+  ?pdoi ecrm:P2_has_type <http://www.doi.org>.
+?pdoi ecrm:P3_has_note ?pdoiv.
+
+BIND(xsd:integer(?pid_str) as ?pid)
+  VALUES (?part_or_adaption_type) {
+    (sphaera:Part)
+    (sphaera:Part_Adaption)
+  }
+       ?part_or_adaption ecrm:P2_has_type ?part_type .
+   ?part_type ecrm:P3_has_note ?part_adaption_type_label.
+}
+  
+   OPTIONAL{
+        ?book ecrm:P128_carries/efrbroo:R24i_was_created_through/ecrm:P7_took_place_at/ecrm:P3_has_note ?place.
+    }
+     OPTIONAL{
+        ?book ecrm:P128_carries/efrbroo:R24i_was_created_through/ecrm:P4_has_time-span/ecrm:P82a_begin_of_the_beginning ?begin.
+  }
+  
+  OPTIONAL{
+  ?book efrbroo:R28i_was_produced_by/ecrm:PC01_is_domain_of/ecrm:PC02_has_range ?printer .
+    ?printer ecrm:P48_has_preferred_identifier/ecrm:P3_has_note ?printer_label .}
+  OPTIONAL {  ?book ecrm:P128_carries/efrbroo:R24i_was_created_through/ecrm:PC01_is_domain_of/ecrm:PC02_has_range ?publisher .
+    ?publisher ecrm:P48_has_preferred_identifier/ecrm:P3_has_note ?publisher_label .
+
+}
+  OPTIONAL {  ?book ecrm:P128_carries/ecrm:P165_incorporates/efrbroo:R17i_was_created_by/ecrm:PC01_is_domain_of ?carried_out_by .
+                      ?carried_out_by a ecrm:PC14_carried_out_by ;
+                        ecrm:P14.1_in_the_role_of sphRole:author ;
+                        ecrm:PC02_has_range ?author .
+  ?author ecrm:P48_has_preferred_identifier/ecrm:P3_has_note ?author_label .}
+
+  
+ OPTIONAL {
+  ?book ecrm:P3_has_note ?short_title .
+  }
+
+  
+  #BIND(URI(CONCAT("https://devmeta.sphaera.mpiwg-berlin.mpg.de/resource/:viewBook?bookiri=", STR(?book))) AS ?bookURL)
+  Bind (?book as ?bookURL)
+  Bind(?images as ?imageURL)
+
+  FILTER (!BOUND(?flag) || STRLEN(?flag) < 1)
+  FILTER (regex(?note, '^CK_'))
+  FILTER (regex(?cluster_name, '^SAC_SIL'))
+
+} GROUP BY ?imageURL ?page_link ?bb ?cluster_name ?doiv ?short_title ?bid ?pagenum ?pid ?pdoiv ?place ?begin
+
