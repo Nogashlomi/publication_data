@@ -1,0 +1,929 @@
+[
+  {
+    "label": "University of Bologna",
+    "city": "Bologna, Italy",
+    "lat": 44.4949,
+    "lon": 11.3426,
+    "foundation": 1088,
+    "closing": 9999,
+    "type_name": "Studium generale; law focus"
+  },
+  {
+    "label": "University of Oxford",
+    "city": "Oxford, UK",
+    "lat": 51.752,
+    "lon": -1.2577,
+    "foundation": 1167,
+    "closing": 9999,
+    "type_name": "Medieval scholars\u2019 teaching community"
+  },
+  {
+    "label": "University of Paris",
+    "city": "Paris, France",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "foundation": 1150,
+    "closing": 1970,
+    "type_name": "Studium generale; papal recognition"
+  },
+  {
+    "label": "University of Cambridge",
+    "city": "Cambridge, UK",
+    "lat": 52.2053,
+    "lon": 0.1218,
+    "foundation": 1209,
+    "closing": 9999,
+    "type_name": "Founded by Oxford scholars"
+  },
+  {
+    "label": "University of Palencia",
+    "city": "Palencia, Spain",
+    "lat": 42.0086,
+    "lon": -4.5347,
+    "foundation": 1212,
+    "closing": 9999,
+    "type_name": "Short-lived medieval university"
+  },
+  {
+    "label": "University of Salamanca",
+    "city": "Salamanca, Spain",
+    "lat": 40.9701,
+    "lon": -5.6635,
+    "foundation": 1218,
+    "closing": 9999,
+    "type_name": "Oldest in Spain; early medieval roots"
+  },
+  {
+    "label": "University of Padua",
+    "city": "Padua, Italy",
+    "lat": 45.4064,
+    "lon": 11.8768,
+    "foundation": 1222,
+    "closing": 9999,
+    "type_name": "Studium generale; medicine & law"
+  },
+  {
+    "label": "University of Naples Federico II",
+    "city": "Naples, Italy",
+    "lat": 40.8518,
+    "lon": 14.2681,
+    "foundation": 1224,
+    "closing": 9999,
+    "type_name": "Founded by Frederick II"
+  },
+  {
+    "label": "University of Toulouse",
+    "city": "Toulouse, France",
+    "lat": 43.6047,
+    "lon": 1.4442,
+    "foundation": 1229,
+    "closing": 9999,
+    "type_name": "Medieval French university"
+  },
+  {
+    "label": "University of Vicenza",
+    "city": "Vicenza, Italy",
+    "lat": 45.5453,
+    "lon": 11.5405,
+    "foundation": 1204,
+    "closing": 9999,
+    "type_name": "Medieval foundation"
+  },
+  {
+    "label": "University of Arezzo",
+    "city": "Arezzo, Italy",
+    "lat": 43.4633,
+    "lon": 11.8792,
+    "foundation": 1215,
+    "closing": 9999,
+    "type_name": "Medieval institution"
+  },
+  {
+    "label": "University of Montpellier",
+    "city": "Montpellier, France",
+    "lat": 43.6108,
+    "lon": 3.8767,
+    "foundation": 1289,
+    "closing": 9999,
+    "type_name": "Early medicine & law; recognized medieval"
+  },
+  {
+    "label": "University of Coimbra",
+    "city": "Coimbra, Portugal",
+    "lat": 40.2056,
+    "lon": -8.4191,
+    "foundation": 1290,
+    "closing": 9999,
+    "type_name": "Oldest Portuguese university"
+  },
+  {
+    "label": "University of Perugia",
+    "city": "Perugia, Italy",
+    "lat": 43.1107,
+    "lon": 12.3908,
+    "foundation": 1308,
+    "closing": 9999,
+    "type_name": "Medieval foundation"
+  },
+  {
+    "label": "University of Avignon",
+    "city": "Avignon, France",
+    "lat": 43.9493,
+    "lon": 4.8055,
+    "foundation": 1303,
+    "closing": 9999,
+    "type_name": "Medieval papal university"
+  },
+  {
+    "label": "University of Cahors",
+    "city": "Cahors, France",
+    "lat": 44.4476,
+    "lon": 1.4387,
+    "foundation": 1332,
+    "closing": 9999,
+    "type_name": "Southwestern French university"
+  },
+  {
+    "label": "University of Angers",
+    "city": "Angers, France",
+    "lat": 47.4784,
+    "lon": -0.5632,
+    "foundation": 1337,
+    "closing": 9999,
+    "type_name": "Medieval French university"
+  },
+  {
+    "label": "University of Grenoble",
+    "city": "Grenoble, France",
+    "lat": 45.1885,
+    "lon": 5.7245,
+    "foundation": 1339,
+    "closing": 9999,
+    "type_name": "Early modern foundation"
+  },
+  {
+    "label": "Charles University",
+    "city": "Prague, Czechia",
+    "lat": 50.0755,
+    "lon": 14.4378,
+    "foundation": 1348,
+    "closing": 9999,
+    "type_name": "First in Central Europe"
+  },
+  {
+    "label": "University of Pisa",
+    "city": "Pisa, Italy",
+    "lat": 43.7228,
+    "lon": 10.4017,
+    "foundation": 1343,
+    "closing": 9999,
+    "type_name": "Medieval Italian foundation"
+  },
+  {
+    "label": "University of Cracow (Jagiellonian)",
+    "city": "Krak\u00f3w, Poland",
+    "lat": 50.0647,
+    "lon": 19.945,
+    "foundation": 1364,
+    "closing": 9999,
+    "type_name": "Oldest in Poland"
+  },
+  {
+    "label": "University of Vienna",
+    "city": "Vienna, Austria",
+    "lat": 48.2082,
+    "lon": 16.3738,
+    "foundation": 1365,
+    "closing": 9999,
+    "type_name": "Habsburg foundation"
+  },
+  {
+    "label": "University of P\u00e9cs",
+    "city": "P\u00e9cs, Hungary",
+    "lat": 46.0727,
+    "lon": 18.2323,
+    "foundation": 1367,
+    "closing": 9999,
+    "type_name": "Short-lived medieval university"
+  },
+  {
+    "label": "University of Erfurt",
+    "city": "Erfurt, Germany",
+    "lat": 50.9848,
+    "lon": 11.0299,
+    "foundation": 1379,
+    "closing": 9999,
+    "type_name": "Medieval / Renaissance German"
+  },
+  {
+    "label": "University of Heidelberg",
+    "city": "Heidelberg, Germany",
+    "lat": 49.3988,
+    "lon": 8.6724,
+    "foundation": 1386,
+    "closing": 9999,
+    "type_name": "Oldest in Germany"
+  },
+  {
+    "label": "University of Cologne",
+    "city": "Cologne, Germany",
+    "lat": 50.9375,
+    "lon": 6.9603,
+    "foundation": 1388,
+    "closing": 9999,
+    "type_name": "Early German foundation"
+  },
+  {
+    "label": "University of Turin",
+    "city": "Turin, Italy",
+    "lat": 45.0703,
+    "lon": 7.6869,
+    "foundation": 1404,
+    "closing": 9999,
+    "type_name": "Renaissance Italian"
+  },
+  {
+    "label": "University of Leipzig",
+    "city": "Leipzig, Germany",
+    "lat": 51.3397,
+    "lon": 12.3731,
+    "foundation": 1409,
+    "closing": 9999,
+    "type_name": "Early modern German"
+  },
+  {
+    "label": "University of St Andrews",
+    "city": "St Andrews, Scotland",
+    "lat": 56.3398,
+    "lon": -2.7967,
+    "foundation": 1411,
+    "closing": 9999,
+    "type_name": "Medieval Scottish university"
+  },
+  {
+    "label": "University of Rostock",
+    "city": "Rostock, Germany",
+    "lat": 54.0924,
+    "lon": 12.0991,
+    "foundation": 1419,
+    "closing": 9999,
+    "type_name": "Hanseatic region"
+  },
+  {
+    "label": "Old University of Louvain",
+    "city": "Leuven, Belgium",
+    "lat": 50.8798,
+    "lon": 4.7005,
+    "foundation": 1425,
+    "closing": 1797,
+    "type_name": "Low Countries foundation"
+  },
+  {
+    "label": "University of Poitiers",
+    "city": "Poitiers, France",
+    "lat": 46.5802,
+    "lon": 0.3404,
+    "foundation": 1431,
+    "closing": 9999,
+    "type_name": "Early modern French"
+  },
+  {
+    "label": "University of Bordeaux",
+    "city": "Bordeaux, France",
+    "lat": 44.8378,
+    "lon": -0.5792,
+    "foundation": 1441,
+    "closing": 9999,
+    "type_name": "French Renaissance"
+  },
+  {
+    "label": "University of Barcelona",
+    "city": "Barcelona, Spain",
+    "lat": 41.3851,
+    "lon": 2.1734,
+    "foundation": 1450,
+    "closing": 9999,
+    "type_name": "Spanish Renaissance"
+  },
+  {
+    "label": "University of Greifswald",
+    "city": "Greifswald, Germany",
+    "lat": 54.0924,
+    "lon": 13.3853,
+    "foundation": 1456,
+    "closing": 9999,
+    "type_name": "Medieval German"
+  },
+  {
+    "label": "University of Freiburg",
+    "city": "Freiburg, Germany",
+    "lat": 47.999,
+    "lon": 7.8421,
+    "foundation": 1457,
+    "closing": 9999,
+    "type_name": "Early German foundation"
+  },
+  {
+    "label": "University of Basel",
+    "city": "Basel, Switzerland",
+    "lat": 47.5596,
+    "lon": 7.5886,
+    "foundation": 1459,
+    "closing": 9999,
+    "type_name": "Swiss medieval foundation"
+  },
+  {
+    "label": "University of Ingolstadt",
+    "city": "Ingolstadt, Germany",
+    "lat": 48.7665,
+    "lon": 11.4258,
+    "foundation": 1472,
+    "closing": 9999,
+    "type_name": "Closed 1800; Bavaria"
+  },
+  {
+    "label": "University of Valencia",
+    "city": "Valencia, Spain",
+    "lat": 39.4699,
+    "lon": -0.3763,
+    "foundation": 1499,
+    "closing": 9999,
+    "type_name": "Spanish Renaissance"
+  },
+  {
+    "label": "University of Leipzig",
+    "city": "Leipzig, Germany",
+    "lat": 51.3397,
+    "lon": 12.3731,
+    "foundation": 1500,
+    "closing": 9999,
+    "type_name": "Early modern German"
+  },
+  {
+    "label": "University of Wittenberg",
+    "city": "Wittenberg, Germany",
+    "lat": 51.8666,
+    "lon": 12.6464,
+    "foundation": 1502,
+    "closing": 1817,
+    "type_name": "Lutheran Reformation influence"
+  },
+  {
+    "label": "University of Alcal\u00e1",
+    "city": "Alcal\u00e1 de Henares, Spain",
+    "lat": 40.4818,
+    "lon": -3.3636,
+    "foundation": 1508,
+    "closing": 1836,
+    "type_name": "Spanish Renaissance"
+  },
+  {
+    "label": "University of Coimbra (moved)",
+    "city": "Coimbra, Portugal",
+    "lat": 40.2056,
+    "lon": -8.4191,
+    "foundation": 1537,
+    "closing": 9999,
+    "type_name": "Transferred city 1537"
+  },
+  {
+    "label": "University of Santiago de Compostela",
+    "city": "Santiago de Compostela, Spain",
+    "lat": 42.8806,
+    "lon": -8.5453,
+    "foundation": 1504,
+    "closing": 9999,
+    "type_name": "Early modern Spain"
+  },
+  {
+    "label": "University of Douai",
+    "city": "Douai, France",
+    "lat": 50.3686,
+    "lon": 3.08,
+    "foundation": 1559,
+    "closing": 1795,
+    "type_name": "French Renaissance; theological focus"
+  },
+  {
+    "label": "University of K\u00f6nigsberg",
+    "city": "Kaliningrad, Russia",
+    "lat": 54.7104,
+    "lon": 20.4522,
+    "foundation": 1544,
+    "closing": 1945,
+    "type_name": "Prussian university"
+  },
+  {
+    "label": "University of W\u00fcrzburg",
+    "city": "W\u00fcrzburg, Germany",
+    "lat": 49.7913,
+    "lon": 9.9534,
+    "foundation": 1582,
+    "closing": 9999,
+    "type_name": "Early modern German"
+  },
+  {
+    "label": "University of Helmstedt",
+    "city": "Helmstedt, Germany",
+    "lat": 52.2242,
+    "lon": 10.9654,
+    "foundation": 1576,
+    "closing": 1810,
+    "type_name": "Lutheran foundation"
+  },
+  {
+    "label": "University of Toulouse (revival)",
+    "city": "Toulouse, France",
+    "lat": 43.6047,
+    "lon": 1.4442,
+    "foundation": 1550,
+    "closing": 9999,
+    "type_name": "Reorganized 1550s"
+  },
+  {
+    "label": "University of Perugia (revival)",
+    "city": "Perugia, Italy",
+    "lat": 43.1107,
+    "lon": 12.3908,
+    "foundation": 1540,
+    "closing": 9999,
+    "type_name": "Papal recognition renewed"
+  },
+  {
+    "label": "University of Ferrara",
+    "city": "Ferrara, Italy",
+    "lat": 44.8383,
+    "lon": 11.6207,
+    "foundation": 1452,
+    "closing": 9999,
+    "type_name": "Renaissance Italian"
+  },
+  {
+    "label": "University of Pisa (reorganization)",
+    "city": "Pisa, Italy",
+    "lat": 43.7228,
+    "lon": 10.4017,
+    "foundation": 1540,
+    "closing": 9999,
+    "type_name": "Renaissance medicine & law"
+  },
+  {
+    "label": "University of Zaragoza",
+    "city": "Zaragoza, Spain",
+    "lat": 41.6488,
+    "lon": -0.8891,
+    "foundation": 1542,
+    "closing": 9999,
+    "type_name": "Spanish Renaissance"
+  },
+  {
+    "label": "University of Granada",
+    "city": "Granada, Spain",
+    "lat": 37.1773,
+    "lon": -3.5986,
+    "foundation": 1531,
+    "closing": 9999,
+    "type_name": "Spanish Renaissance"
+  },
+  {
+    "label": "University of Cagliari",
+    "city": "Cagliari, Italy",
+    "lat": 39.2238,
+    "lon": 9.1217,
+    "foundation": 1606,
+    "closing": 9999,
+    "type_name": "Sardinian university"
+  },
+  {
+    "label": "University of Uppsala",
+    "city": "Uppsala, Sweden",
+    "lat": 59.8586,
+    "lon": 17.6389,
+    "foundation": 1477,
+    "closing": 9999,
+    "type_name": "Oldest Swedish university"
+  },
+  {
+    "label": "University of Copenhagen",
+    "city": "Copenhagen, Denmark",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "foundation": 1479,
+    "closing": 9999,
+    "type_name": "Danish early modern university"
+  },
+  {
+    "label": "University of Oslo",
+    "city": "Oslo, Norway",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "foundation": 1594,
+    "closing": 9999,
+    "type_name": "Norwegian; initially theological focus"
+  },
+  {
+    "label": "University of Vilnius",
+    "city": "Vilnius, Lithuania",
+    "lat": 54.6872,
+    "lon": 25.2797,
+    "foundation": 1579,
+    "closing": 9999,
+    "type_name": "Jesuit foundation"
+  },
+  {
+    "label": "University of Krak\u00f3w (reorganization)",
+    "city": "Krak\u00f3w, Poland",
+    "lat": 50.0647,
+    "lon": 19.945,
+    "foundation": 1505,
+    "closing": 9999,
+    "type_name": "Renaissance faculties added"
+  },
+  {
+    "label": "University of Lublin (Catholic Academy)",
+    "city": "Lublin, Poland",
+    "lat": 51.2465,
+    "lon": 22.5684,
+    "foundation": 1569,
+    "closing": 1817,
+    "type_name": "Jesuit influence"
+  },
+  {
+    "label": "University of Ingolstadt (Bavaria, reformed)",
+    "city": "Ingolstadt, Germany",
+    "lat": 48.7665,
+    "lon": 11.4258,
+    "foundation": 1550,
+    "closing": 1800,
+    "type_name": "Reorganization"
+  },
+  {
+    "label": "University of Alcala (Spain, new faculties)",
+    "city": "Alcal\u00e1, Spain",
+    "lat": 40.4818,
+    "lon": -3.3636,
+    "foundation": 1555,
+    "closing": 1836,
+    "type_name": "Humanities & theology"
+  },
+  {
+    "label": "University of Helmstedt (Germany)",
+    "city": "Helmstedt, Germany",
+    "lat": 52.2242,
+    "lon": 10.9654,
+    "foundation": 1576,
+    "closing": 1810,
+    "type_name": "Lutheran theology & arts"
+  },
+  {
+    "label": "University of W\u00fcrzburg (Germany, papal recognition)",
+    "city": "W\u00fcrzburg, Germany",
+    "lat": 49.7913,
+    "lon": 9.9534,
+    "foundation": 1582,
+    "closing": 9999,
+    "type_name": "Papal university"
+  },
+  {
+    "label": "University of Cagliari",
+    "city": "Cagliari, Italy",
+    "lat": 39.2238,
+    "lon": 9.1217,
+    "foundation": 1606,
+    "closing": 9999,
+    "type_name": "Sardinian early modern university"
+  },
+  {
+    "label": "University of Ghent",
+    "city": "Ghent, Belgium",
+    "lat": 51.0543,
+    "lon": 3.7174,
+    "foundation": 1817,
+    "closing": 9999,
+    "type_name": "Jesuit influence; Low Countries"
+  },
+  {
+    "label": "University of Groningen",
+    "city": "Groningen, Netherlands",
+    "lat": 53.2194,
+    "lon": 6.5665,
+    "foundation": 1614,
+    "closing": 9999,
+    "type_name": "Dutch Republic foundation"
+  },
+  {
+    "label": "University of Mainz",
+    "city": "Mainz, Germany",
+    "lat": 49.9929,
+    "lon": 8.2473,
+    "foundation": 1622,
+    "closing": 1798,
+    "type_name": "Jesuit influence; electoral foundation"
+  },
+  {
+    "label": "University of Wroc\u0142aw (Breslau)",
+    "city": "Wroc\u0142aw, Poland",
+    "lat": 51.1079,
+    "lon": 17.0385,
+    "foundation": 1702,
+    "closing": 9999,
+    "type_name": "Silesian / Jesuit foundation"
+  },
+  {
+    "label": "University of Innsbruck",
+    "city": "Innsbruck, Austria",
+    "lat": 47.2692,
+    "lon": 11.4041,
+    "foundation": 1669,
+    "closing": 9999,
+    "type_name": "Tyrolean foundation; Jesuit influence"
+  },
+  {
+    "label": "University of Halle",
+    "city": "Halle, Germany",
+    "lat": 51.4969,
+    "lon": 11.9683,
+    "foundation": 1694,
+    "closing": 9999,
+    "type_name": "Pietist / Enlightenment center"
+  },
+  {
+    "label": "University of G\u00f6ttingen",
+    "city": "G\u00f6ttingen, Germany",
+    "lat": 51.5413,
+    "lon": 9.9158,
+    "foundation": 1737,
+    "closing": 9999,
+    "type_name": "Enlightenment research university"
+  },
+  {
+    "label": "University of Mannheim (predecessor colleges)",
+    "city": "Mannheim, Germany",
+    "lat": 49.4875,
+    "lon": 8.466,
+    "foundation": 1765,
+    "closing": 9999,
+    "type_name": "State foundation, economics & law"
+  },
+  {
+    "label": "University of Freiburg (reorganization)",
+    "city": "Freiburg, Germany",
+    "lat": 47.999,
+    "lon": 7.8421,
+    "foundation": 1760,
+    "closing": 9999,
+    "type_name": "Papal recognition expanded faculties"
+  },
+  {
+    "label": "University of Turin (expansion)",
+    "city": "Turin, Italy",
+    "lat": 45.0703,
+    "lon": 7.6869,
+    "foundation": 1720,
+    "closing": 9999,
+    "type_name": "Additional faculties"
+  },
+  {
+    "label": "University of Naples Federico II (reorganization)",
+    "city": "Naples, Italy",
+    "lat": 40.8518,
+    "lon": 14.2681,
+    "foundation": 1735,
+    "closing": 9999,
+    "type_name": "Reformed faculties"
+  },
+  {
+    "label": "University of Vienna (faculty reforms)",
+    "city": "Vienna, Austria",
+    "lat": 48.2082,
+    "lon": 16.3738,
+    "foundation": 1750,
+    "closing": 9999,
+    "type_name": "Enlightenment reforms"
+  },
+  {
+    "label": "University of Prague (Charles University, reforms)",
+    "city": "Prague, Czechia",
+    "lat": 50.0755,
+    "lon": 14.4378,
+    "foundation": 1750,
+    "closing": 9999,
+    "type_name": "Central European university reforms"
+  },
+  {
+    "label": "University of Leiden",
+    "city": "Leiden, Netherlands",
+    "lat": 52.1601,
+    "lon": 4.497,
+    "foundation": 1575,
+    "closing": 9999,
+    "type_name": "Dutch Republic; science & law"
+  },
+  {
+    "label": "University of Utrecht",
+    "city": "Utrecht, Netherlands",
+    "lat": 52.0907,
+    "lon": 5.1214,
+    "foundation": 1636,
+    "closing": 9999,
+    "type_name": "Dutch Republic; humanities & sciences"
+  },
+  {
+    "label": "University of Lund",
+    "city": "Lund, Sweden",
+    "lat": 55.7047,
+    "lon": 13.191,
+    "foundation": 1666,
+    "closing": 9999,
+    "type_name": "Swedish early modern university"
+  },
+  {
+    "label": "University of Oslo",
+    "city": "Oslo, Norway",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "foundation": 1811,
+    "closing": 9999,
+    "type_name": "Norwegian national university"
+  },
+  {
+    "label": "University of Copenhagen (faculty expansion)",
+    "city": "Copenhagen, Denmark",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "foundation": 1600,
+    "closing": 9999,
+    "type_name": "Faculties expanded in 17th century"
+  },
+  {
+    "label": "University of Tartu (Dorpat)",
+    "city": "Tartu, Estonia",
+    "lat": 58.3776,
+    "lon": 26.729,
+    "foundation": 1632,
+    "closing": 9999,
+    "type_name": "Swedish Empire foundation"
+  },
+  {
+    "label": "University of Vilnius (Jesuit reforms)",
+    "city": "Vilnius, Lithuania",
+    "lat": 54.6872,
+    "lon": 25.2797,
+    "foundation": 1579,
+    "closing": 9999,
+    "type_name": "Expanded faculties"
+  },
+  {
+    "label": "University of Innsbruck (faculty expansion)",
+    "city": "Innsbruck, Austria",
+    "lat": 47.2692,
+    "lon": 11.4041,
+    "foundation": 1669,
+    "closing": 9999,
+    "type_name": "Theology & law expansions"
+  },
+  {
+    "label": "University of Halle (additional faculties)",
+    "city": "Halle, Germany",
+    "lat": 51.4969,
+    "lon": 11.9683,
+    "foundation": 1694,
+    "closing": 9999,
+    "type_name": "Pietist / Enlightenment faculties"
+  },
+  {
+    "label": "University of G\u00f6ttingen (research emphasis)",
+    "city": "G\u00f6ttingen, Germany",
+    "lat": 51.5413,
+    "lon": 9.9158,
+    "foundation": 1737,
+    "closing": 9999,
+    "type_name": "Scientific research focus"
+  },
+  {
+    "label": "University of Freiburg (final reorganization)",
+    "city": "Freiburg, Germany",
+    "lat": 47.999,
+    "lon": 7.8421,
+    "foundation": 1760,
+    "closing": 9999,
+    "type_name": "State university reforms"
+  },
+  {
+    "label": "University of Munich (Ludwig Maximilian)",
+    "city": "Munich, Germany",
+    "lat": 48.1351,
+    "lon": 11.582,
+    "foundation": 1800,
+    "closing": 9999,
+    "type_name": "Bavarian state university"
+  },
+  {
+    "label": "University of Warsaw",
+    "city": "Warsaw, Poland",
+    "lat": 52.2297,
+    "lon": 21.0122,
+    "foundation": 1816,
+    "closing": 9999,
+    "type_name": "Polish Enlightenment university"
+  },
+  {
+    "label": "Salerno",
+    "city": "Salerno, Italy",
+    "lat": 40.67,
+    "lon": 14.78,
+    "foundation": 9,
+    "closing": 9999,
+    "type_name": "Specializing in Medicine"
+  },
+  {
+    "label": "Montpellier",
+    "city": "Montpellier, France",
+    "lat": 43.61,
+    "lon": 3.87,
+    "foundation": 1160,
+    "closing": 9999,
+    "type_name": "Early medical/law focus"
+  },
+  {
+    "label": "Toulouse",
+    "city": "Toulouse, France",
+    "lat": 43.6,
+    "lon": 1.44,
+    "foundation": 1229,
+    "closing": 9999,
+    "type_name": "Founded by Papal Bull"
+  },
+  {
+    "label": "Siena",
+    "city": "Siena, Italy",
+    "lat": 43.31,
+    "lon": 11.33,
+    "foundation": 1240,
+    "closing": 9999,
+    "type_name": "City-funded foundation"
+  },
+  {
+    "label": "Valladolid",
+    "city": "Valladolid, Spain",
+    "lat": 41.65,
+    "lon": -4.72,
+    "foundation": 1241,
+    "closing": 9999,
+    "type_name": "Royal foundation"
+  },
+  {
+    "label": "Coimbra",
+    "city": "Coimbra, Portugal",
+    "lat": 40.2,
+    "lon": -8.42,
+    "foundation": 1290,
+    "closing": 9999,
+    "type_name": "Moved from Lisbon (1290)"
+  },
+  {
+    "label": "Sapienza",
+    "city": "Rome, Italy",
+    "lat": 41.89,
+    "lon": 12.51,
+    "foundation": 1303,
+    "closing": 9999,
+    "type_name": "Founded by Pope Boniface VIII"
+  },
+  {
+    "label": "Perugia",
+    "city": "Perugia, Italy",
+    "lat": 43.11,
+    "lon": 12.38,
+    "foundation": 1308,
+    "closing": 9999,
+    "type_name": "Recognized as Studium Generale"
+  },
+  {
+    "label": "Prague",
+    "city": "Prague, Czechia",
+    "lat": 50.08,
+    "lon": 14.42,
+    "foundation": 1348,
+    "closing": 9999,
+    "type_name": "First in Holy Roman Empire"
+  },
+  {
+    "label": "Krakow",
+    "city": "Krakow, Poland",
+    "lat": 50.06,
+    "lon": 19.93,
+    "foundation": 1364,
+    "closing": 9999,
+    "type_name": "Founded by Casimir III"
+  },
+  {
+    "label": "Vienna",
+    "city": "Vienna, Austria",
+    "lat": 48.21,
+    "lon": 16.36,
+    "foundation": 1365,
+    "closing": 9999,
+    "type_name": "Founded by Rudolf IV"
+  }
+]
