@@ -3,11 +3,11 @@ import json
 import os
 
 # Paths
-BOOK_DATA_PATH = '../DATA/01_corpus_metadata/full_book_data_feb_25.csv'
-IMAGE_DATA_PATH = '../DATA/02_image_clusters/full_image_data_feb_25.csv'
-UCK_DATA_PATH = '../DATA/03_content_keywords/all_elements_all_ck_ucks.xlsx'
+BOOK_DATA_PATH = '../../DATA/01_corpus_metadata/full_book_data_feb_25.csv'
+IMAGE_DATA_PATH = '../../DATA/02_image_clusters/full_image_data_feb_25.csv'
+UCK_DATA_PATH = '../../DATA/03_content_keywords/all_elements_all_ck_ucks.xlsx'
 OUTPUT_DIR = '/Users/nogashlomi/projects/Image_data/university_comparison'
-OUTPUT_JSON = os.path.join(OUTPUT_DIR, '../DATA/05_external_datasets/books_data.json')
+OUTPUT_JSON = os.path.join(OUTPUT_DIR, '../../DATA/05_external_datasets/books_data.json')
 
 def process_data():
     print("Loading data...")
@@ -94,7 +94,7 @@ def process_data():
     with open(OUTPUT_JSON, 'w') as f:
         json.dump(books_list, f, indent=2)
     
-    OUTPUT_UNIV = os.path.join(OUTPUT_DIR, '../DATA/05_external_datasets/universities_data.json')
+    OUTPUT_UNIV = os.path.join(OUTPUT_DIR, '../../DATA/05_external_datasets/universities_data.json')
     print(f"Saving {len(univ_list)} universities to {OUTPUT_UNIV}...")
     with open(OUTPUT_UNIV, 'w') as f:
         json.dump(univ_list, f, indent=2)

@@ -3,9 +3,9 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 # Paths
-GEOJSON_PATH = '../DATA/05_external_datasets/europe.geojson'
-BOOKS_JSON_PATH = '../DATA/05_external_datasets/books_data.json'
-UNIV_JSON_PATH = '../DATA/05_external_datasets/universities_data.json'
+GEOJSON_PATH = '../../DATA/05_external_datasets/europe.geojson'
+BOOKS_JSON_PATH = '../../DATA/05_external_datasets/books_data.json'
+UNIV_JSON_PATH = '../../DATA/05_external_datasets/universities_data.json'
 OUTPUT_PNG = '/Users/nogashlomi/projects/Image_data/university_comparison/comparison_map.png'
 
 # Map settings
